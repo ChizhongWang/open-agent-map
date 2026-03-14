@@ -1,0 +1,10 @@
+name = "open-agent-map"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[triggers]
+crons = []
+
+routes = [
+  { pattern = "agentmap.veri-glow.com/*", zone_name = "veri-glow.com" }
+]
