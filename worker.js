@@ -8,7 +8,7 @@
  * 4. Shows "request map" page on 404
  */
 
-const GITHUB_PAGES_ORIGIN = "https://chizhongwang.github.io/open-agent-map";
+const GITHUB_RAW_ORIGIN = "https://raw.githubusercontent.com/ChizhongWang/open-agent-map/main";
 
 export default {
   async fetch(request) {
@@ -37,7 +37,7 @@ export default {
 
     // If already requesting .json, always return raw JSON (skip content negotiation)
     if (path.endsWith(".json")) {
-      const specUrl = GITHUB_PAGES_ORIGIN + path;
+      const specUrl = GITHUB_RAW_ORIGIN + path;
       const specResp = await fetch(specUrl, {
         headers: { "User-Agent": "Open-Agent-Map-Worker/1.0" },
         cf: { cacheTtl: 300 },
@@ -66,7 +66,7 @@ export default {
 };
 
 async function fetchAndServe(request, jsonPath) {
-  const specUrl = GITHUB_PAGES_ORIGIN + jsonPath;
+  const specUrl = GITHUB_RAW_ORIGIN + jsonPath;
 
   try {
     const specResp = await fetch(specUrl, {
@@ -493,7 +493,7 @@ function serveHomepage(request) {
 
 async function serveDirectoryListing(request, dirPath) {
   // Fetch manifest
-  const manifestUrl = GITHUB_PAGES_ORIGIN + "/_manifest.json";
+  const manifestUrl = GITHUB_RAW_ORIGIN + "/_manifest.json";
   try {
     const resp = await fetch(manifestUrl, {
       headers: { "User-Agent": "Open-Agent-Map-Worker/1.0" },
