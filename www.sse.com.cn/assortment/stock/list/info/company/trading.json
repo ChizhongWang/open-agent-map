@@ -21,7 +21,7 @@
       "required": false
     }
   },
-  "confidence": 0.7,
+  "confidence": 0.85,
   "auto_discovered": true,
   "last_verified": "2026-03-14",
   "caveats": [
