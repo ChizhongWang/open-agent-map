@@ -1,0 +1,33 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/regulation/supervision/dynamic/",
+  "title": "上市公司监管动态",
+  "summary": "上交所上市公司监管动态公告列表，包含纪律处分、监管措施、工作评价等信息。",
+  "type": "scrape",
+  "method": "HTML",
+  "selectors": {
+    "list_container": ".sse_list_1 dl",
+    "item": ".sse_list_1 dl dd",
+    "date": "dd span",
+    "title": "dd a",
+    "link": "dd a@href",
+    "link_title": "dd a@title"
+  },
+  "pagination": {
+    "pattern": "https://www.sse.com.cn/regulation/supervision/dynamic/s_list_{n}.shtml",
+    "first_page": "https://www.sse.com.cn/regulation/supervision/dynamic/s_list.shtml",
+    "total_pages": 7,
+    "note": "s_list.shtml 返回第1页，s_list_2.shtml 返回第2页，依此类推。返回的是 HTML 片段，非完整页面。"
+  },
+  "link_format": {
+    "articles": "/regulation/supervision/dynamic/c/c_YYYYMMDD_NNNNNNN.shtml",
+    "base_url": "https://www.sse.com.cn"
+  },
+  "confidence": 0.92,
+  "caveats": [
+    "数据嵌在 HTML 中，无 API 接口，需解析 DOM 获取",
+    "分页片段是纯 HTML 片段（非完整页面），直接解析即可",
+    "链接为相对路径，需拼接 https://www.sse.com.cn 前缀"
+  ],
+  "last_verified": "2026-03-14"
+}

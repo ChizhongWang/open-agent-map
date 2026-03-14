@@ -1,0 +1,31 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/listing/announcement/notification/",
+  "title": "上市审核业务通知",
+  "summary": "上交所发行上市审核中心业务通知公告列表，包含科技创新咨询委员会公告、审核规则通知等。",
+  "type": "scrape",
+  "method": "HTML",
+  "selectors": {
+    "list_container": ".sse_list_1 dl",
+    "item": ".sse_list_1 dl dd",
+    "date": "dd span",
+    "title": "dd a",
+    "link": "dd a@href",
+    "link_title": "dd a@title"
+  },
+  "pagination": {
+    "pattern": "https://www.sse.com.cn/listing/announcement/notification/s_list_{n}.shtml",
+    "first_page": "https://www.sse.com.cn/listing/announcement/notification/s_list.shtml",
+    "total_pages": 4
+  },
+  "link_format": {
+    "articles": "/listing/announcement/notification/c/c_YYYYMMDD_NNNNNNN.shtml",
+    "base_url": "https://www.sse.com.cn"
+  },
+  "confidence": 0.92,
+  "caveats": [
+    "数据嵌在 HTML 中，无 API 接口，需解析 DOM 获取",
+    "链接为相对路径，需拼接 https://www.sse.com.cn 前缀"
+  ],
+  "last_verified": "2026-03-14"
+}

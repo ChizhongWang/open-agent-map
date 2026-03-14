@@ -1,0 +1,36 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/regulation/members/measures/",
+  "title": "会员及交易参与人监管措施",
+  "summary": "上交所会员及其他交易参与人监管措施列表，含监管类型、涉及对象、处理日期，表格布局。",
+  "type": "scrape",
+  "method": "HTML",
+  "selectors": {
+    "list_container": ".sse_table_T01 table.table",
+    "item": "tr.js-has-data",
+    "category": "td:nth-child(1)",
+    "title": "td:nth-child(2) a",
+    "link": "td:nth-child(2) a@href",
+    "link_title": "td:nth-child(2) a@title",
+    "entity": "td:nth-child(3)",
+    "date": "td:nth-child(4)"
+  },
+  "fields": ["监管类型", "标题", "涉及对象", "处理日期"],
+  "pagination": {
+    "pattern": "https://www.sse.com.cn/regulation/members/measures/s_list_{n}.shtml",
+    "first_page": "https://www.sse.com.cn/regulation/members/measures/s_list.shtml",
+    "total_pages": 3
+  },
+  "link_format": {
+    "documents": "/regulation/members/measures/c/NNNNNNN/files/UUID.pdf",
+    "base_url": "https://www.sse.com.cn"
+  },
+  "confidence": 0.92,
+  "caveats": [
+    "数据嵌在 HTML 中，无 API 接口，需解析 DOM 获取",
+    "表格布局，非列表布局，注意选择器不同",
+    "链接指向 PDF 文件",
+    "链接为相对路径，需拼接 https://www.sse.com.cn 前缀"
+  ],
+  "last_verified": "2026-03-14"
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/regulation/trading/dynamic/",
+  "title": "交易监管动态",
+  "summary": "上交所交易监管动态公告列表，包含程序化交易管理、异常交易监控等信息。",
+  "type": "scrape",
+  "method": "HTML",
+  "selectors": {
+    "list_container": ".sse_list_1 dl",
+    "item": ".sse_list_1 dl dd",
+    "date": "dd span",
+    "title": "dd a",
+    "link": "dd a@href",
+    "link_title": "dd a@title"
+  },
+  "pagination": {
+    "pattern": "https://www.sse.com.cn/regulation/trading/dynamic/s_list_{n}.shtml",
+    "first_page": "https://www.sse.com.cn/regulation/trading/dynamic/s_list.shtml",
+    "total_pages": 3
+  },
+  "link_format": {
+    "mixed": "部分为 .shtml 文章，部分为 PDF 文件",
+    "base_url": "https://www.sse.com.cn"
+  },
+  "confidence": 0.92,
+  "caveats": [
+    "数据嵌在 HTML 中，无 API 接口，需解析 DOM 获取",
+    "链接混合了 .shtml 网页和 .pdf 文件两种格式",
+    "链接为相对路径，需拼接 https://www.sse.com.cn 前缀"
+  ],
+  "last_verified": "2026-03-14"
+}

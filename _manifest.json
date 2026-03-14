@@ -85,6 +85,16 @@
     "summary": "上交所股票期权信息。"
   },
   {
+    "path": "/www.sse.com.cn/lawandrules/guide/latest",
+    "title": "最新业务指南与流程",
+    "summary": "上交所最新发布的业务指南与操作流程文档列表。"
+  },
+  {
+    "path": "/www.sse.com.cn/listing/announcement/notification",
+    "title": "上市审核业务通知",
+    "summary": "上交所发行上市审核中心业务通知公告列表，包含科技创新咨询委员会公告、审核规则通知等。"
+  },
+  {
     "path": "/www.sse.com.cn/listing/disclosure/ipo",
     "title": "发行上市审核信息披露",
     "summary": "查询上交所 IPO / 再融资 / CDR 审核相关的信息披露文件，支持按文件类型、市场类型、标题关键字、日期范围筛选。"
@@ -403,5 +413,25 @@
     "path": "/www.sse.com.cn/regulation/bonds/jgdt",
     "title": "债券监管动态",
     "summary": "上交所债券监管动态公告列表，按时间倒序排列。"
+  },
+  {
+    "path": "/www.sse.com.cn/regulation/listing/measures",
+    "title": "发行上市审核监管措施",
+    "summary": "上交所发行上市审核监管措施文档列表，包含监管警示、纪律处分等决定书（PDF）。"
+  },
+  {
+    "path": "/www.sse.com.cn/regulation/members/measures",
+    "title": "会员及交易参与人监管措施",
+    "summary": "上交所会员及其他交易参与人监管措施列表，含监管类型、涉及对象、处理日期，表格布局。"
+  },
+  {
+    "path": "/www.sse.com.cn/regulation/supervision/dynamic",
+    "title": "上市公司监管动态",
+    "summary": "上交所上市公司监管动态公告列表，包含纪律处分决定、监管措施决定等。"
+  },
+  {
+    "path": "/www.sse.com.cn/regulation/trading/dynamic",
+    "title": "交易监管动态",
+    "summary": "上交所交易监管动态公告列表，包含程序化交易管理、异常交易监控等信息。"
   }
 ]
