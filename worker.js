@@ -218,7 +218,24 @@ function renderSpecPage(spec, jsonPath) {
   .footer a { color: var(--accent); text-decoration: none; }
   .report-link { color: var(--muted); font-size: 0.8rem; margin-top: 0.5rem; }
   .report-link a { color: #f59e0b; text-decoration: none; }
+  .json-link { cursor: pointer; }
+  .copied { color: #22c55e !important; }
 </style>
+<script>
+async function copyJson(e, path) {
+  e.preventDefault();
+  try {
+    const resp = await fetch(path);
+    const text = await resp.text();
+    await navigator.clipboard.writeText(text);
+    e.target.textContent = 'Copied!';
+    e.target.classList.add('copied');
+    setTimeout(() => { e.target.textContent = 'Copy raw JSON for agent'; e.target.classList.remove('copied'); }, 2000);
+  } catch(err) {
+    window.open(path, '_blank');
+  }
+}
+</script>
 </head>
 <body>
 <div class="container">
@@ -272,7 +289,7 @@ function renderSpecPage(spec, jsonPath) {
     Data outdated? <a href="https://github.com/ChizhongWang/open-agent-map/issues/new?title=STALE:+${encodeURIComponent(jsonPath)}" target="_blank">Report an issue</a>
   </div>
 
-  <a class="json-link" href="${escHtml(jsonPath)}">View raw JSON →</a>
+  <a class="json-link" href="#" onclick="copyJson(event, '${escHtml(jsonPath)}')">Copy raw JSON for agent</a>
 
   <div class="footer">
     <a href="https://github.com/ChizhongWang/open-agent-map">Open Agent Map</a> — crowdsourced API specs for AI agents
