@@ -1,0 +1,24 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/market/stockdata/price/sh/",
+  "title": "市盈率",
+  "summary": "上交所市盈率数据，通过 commonQuery.do 接口获取。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/market/stockdata/price/sh/"
+  },
+  "params": {
+    "sqlId": {
+      "value": "COMMON_SYL_BKPE_LIST_L",
+      "description": "数据查询标识"
+    }
+  },
+  "confidence": 0.7,
+  "auto_discovered": true,
+  "last_verified": "2026-03-14",
+  "caveats": [
+    "需要 Referer header",
+    "返回 JSONP 格式，需去掉回调函数包装"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/market/funddata/overview/day/",
+  "title": "基金成交概况（日度）",
+  "summary": "上交所基金成交概况（日度）数据，通过 commonQuery.do 接口获取。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/market/funddata/overview/day/"
+  },
+  "params": {
+    "sqlId": {
+      "value": "COMMON_SSE_SJ_GPSJ_CJGK_MRGK_C",
+      "description": "数据查询标识"
+    },
+    "PRODUCT_CODE": {
+      "value": "01,02,03,11,17"
+    },
+    "SEARCH_DATE": {
+      "required": false
+    }
+  },
+  "confidence": 0.7,
+  "auto_discovered": true,
+  "last_verified": "2026-03-14",
+  "caveats": [
+    "需要 Referer header",
+    "返回 JSONP 格式，需去掉回调函数包装"
+  ]
+}

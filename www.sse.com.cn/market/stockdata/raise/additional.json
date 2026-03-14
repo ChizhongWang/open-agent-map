@@ -1,0 +1,48 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/market/stockdata/raise/additional/",
+  "title": "募集资金-增发",
+  "summary": "上交所募集资金-增发数据，通过 commonQuery.do 接口获取。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/market/stockdata/raise/additional/"
+  },
+  "params": {
+    "sqlId": {
+      "value": "COMMON_SSE_SJ_GPSJ_MJZJ_ZF_ZBA_L",
+      "description": "数据查询标识"
+    },
+    "LIST_BOARD": {
+      "value": "1"
+    },
+    "isPagination": {
+      "value": "true",
+      "description": "启用分页"
+    },
+    "pageHelp.pageSize": {
+      "value": "25",
+      "description": "每页条数"
+    },
+    "pageHelp.pageNo": {
+      "value": "1",
+      "description": "页码"
+    },
+    "pageHelp.beginPage": {
+      "value": "1"
+    },
+    "pageHelp.cacheSize": {
+      "value": "1"
+    },
+    "pageHelp.endPage": {
+      "value": "1"
+    }
+  },
+  "confidence": 0.7,
+  "auto_discovered": true,
+  "last_verified": "2026-03-14",
+  "caveats": [
+    "需要 Referer header",
+    "返回 JSONP 格式，需去掉回调函数包装"
+  ]
+}

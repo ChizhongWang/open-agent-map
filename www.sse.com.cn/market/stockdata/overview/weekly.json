@@ -1,0 +1,35 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/market/stockdata/overview/weekly/",
+  "title": "股票成交概况（周度）",
+  "summary": "上交所股票成交概况（周度）数据，通过 commonQuery.do 接口获取。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/market/stockdata/overview/weekly/"
+  },
+  "params": {
+    "sqlId": {
+      "value": "COMMON_SSE_SJ_GPSJ_CJGK_MZGK_C",
+      "description": "数据查询标识"
+    },
+    "PRODUCT_CODE": {
+      "value": "01,02,03,11,17"
+    },
+    "START_DATE": {
+      "required": false,
+      "description": "开始日期"
+    },
+    "END_DATE": {
+      "required": false,
+      "description": "结束日期"
+    }
+  },
+  "confidence": 0.7,
+  "auto_discovered": true,
+  "last_verified": "2026-03-14",
+  "caveats": [
+    "需要 Referer header",
+    "返回 JSONP 格式，需去掉回调函数包装"
+  ]
+}
