@@ -1,0 +1,27 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/regulation/bonds/jgdt/",
+  "title": "债券监管动态",
+  "summary": "上交所债券监管动态公告列表，按时间倒序排列。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonSoaQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/regulation/bonds/jgdt/"
+  },
+  "params": {
+    "jsonCallBack": { "required": true, "value": "jsonpCallback", "description": "JSONP 回调函数名" },
+    "sqlId": { "required": true, "value": "BS_GGLL_NEW", "description": "固定查询标识" },
+    "siteId": { "required": true, "value": "28", "description": "站点 ID" },
+    "channelId": { "required": true, "value": "13141,20614", "description": "频道 ID" },
+    "order": { "value": "createTime|desc,saveTime|desc", "description": "排序规则" },
+    "isPagination": { "value": "true" },
+    "pageHelp.pageSize": { "value": "10", "description": "每页条数" },
+    "pageHelp.pageNo": { "value": "1", "description": "页码" }
+  },
+  "confidence": 0.90,
+  "caveats": [
+    "JSONP 响应格式：jsonpCallback({...})，需剥离回调函数包装后解析 JSON",
+    "返回债券监管相关的公告、通知、措施等文档列表"
+  ],
+  "last_verified": "2026-03-14"
+}

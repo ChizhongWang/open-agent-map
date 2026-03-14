@@ -85,6 +85,16 @@
     "summary": "上交所股票期权信息。"
   },
   {
+    "path": "/www.sse.com.cn/listing/disclosure/ipo",
+    "title": "发行上市审核信息披露",
+    "summary": "查询上交所 IPO / 再融资 / CDR 审核相关的信息披露文件，支持按文件类型、市场类型、标题关键字、日期范围筛选。"
+  },
+  {
+    "path": "/www.sse.com.cn/listing/renewal/ipo",
+    "title": "发行上市审核项目动态",
+    "summary": "上交所 IPO 审核项目全流程追踪：项目列表、审核统计、行业分布。支持按关键字、市场类型、审核状态、省份、行业、日期范围筛选。"
+  },
+  {
     "path": "/www.sse.com.cn/market/bonddata/dxkzzcj",
     "title": "大额可转债成交",
     "summary": "上交所大额可转债成交。"
@@ -388,5 +398,10 @@
     "path": "/www.sse.com.cn/market/view",
     "title": "市场总览",
     "summary": "上交所市场总览。"
+  },
+  {
+    "path": "/www.sse.com.cn/regulation/bonds/jgdt",
+    "title": "债券监管动态",
+    "summary": "上交所债券监管动态公告列表，按时间倒序排列。"
   }
 ]

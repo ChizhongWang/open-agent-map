@@ -1,0 +1,30 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/listing/disclosure/ipo/",
+  "title": "发行上市审核信息披露",
+  "summary": "查询上交所 IPO / 再融资 / CDR 审核相关的信息披露文件，支持按文件类型、市场类型、标题关键字、日期范围筛选。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonSoaQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/listing/disclosure/ipo/"
+  },
+  "params": {
+    "jsonCallBack": { "required": true, "value": "jsonpCallback", "description": "JSONP 回调函数名" },
+    "sqlId": { "required": true, "value": "GP_COMMON_FILE_SEARCH", "description": "固定查询标识" },
+    "fileTypeMap": { "value": "I0011,I0012,I0013,I3010", "description": "文件类型筛选（IPO 招股书、审核问询等）" },
+    "marketType": { "value": "1,2", "description": "市场类型：1=主板，2=科创板" },
+    "fileTitle": { "description": "文件标题关键字搜索", "example": "招股说明书" },
+    "startDate": { "description": "开始日期", "example": "2026-01-01" },
+    "endDate": { "description": "结束日期", "example": "2026-03-14" },
+    "isPagination": { "value": "true" },
+    "pageHelp.pageSize": { "value": "25", "description": "每页条数" },
+    "pageHelp.pageNo": { "value": "1", "description": "页码" }
+  },
+  "confidence": 0.90,
+  "caveats": [
+    "JSONP 响应格式：jsonpCallback({...})，需剥离回调函数包装后解析 JSON",
+    "文件下载链接为相对路径，需拼接 https://static.sse.com.cn 前缀",
+    "fileTypeMap 值决定文件类别：I0011=招股书，I0012=审核问询函，I0013=上会结果，I3010=注册结果"
+  ],
+  "last_verified": "2026-03-14"
+}

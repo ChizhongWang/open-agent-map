@@ -1,0 +1,61 @@
+{
+  "domain": "www.sse.com.cn",
+  "url": "https://www.sse.com.cn/listing/renewal/ipo/",
+  "title": "发行上市审核项目动态",
+  "summary": "上交所 IPO 审核项目全流程追踪：项目列表、审核统计、行业分布。支持按关键字、市场类型、审核状态、省份、行业、日期范围筛选。",
+  "method": "GET",
+  "endpoint": "https://query.sse.com.cn/commonSoaQuery.do",
+  "headers": {
+    "Referer": "https://www.sse.com.cn/listing/renewal/ipo/"
+  },
+  "apis": {
+    "项目列表": {
+      "sqlId": "SH_XM_LB",
+      "method": "GET",
+      "endpoint": "https://query.sse.com.cn/commonSoaQuery.do",
+      "paginated": true,
+      "params": {
+        "jsonCallBack": { "required": true, "value": "jsonpCallback" },
+        "keyword": { "description": "公司名称或代码关键字搜索" },
+        "issueMarketType": { "value": "1,2", "description": "市场类型：1=主板，2=科创板" },
+        "currStatus": { "description": "审核状态筛选" },
+        "province": { "description": "注册地省份" },
+        "csrcCode": { "description": "证监会行业代码" },
+        "startDate": { "description": "申报开始日期" },
+        "endDate": { "description": "申报结束日期" },
+        "order": { "value": "updateDate|desc" },
+        "pageHelp.pageSize": { "value": "25" },
+        "pageHelp.pageNo": { "value": "1" }
+      }
+    },
+    "审核统计": {
+      "sqlId": "GP_GPZCZ_GPSFTJ",
+      "method": "GET",
+      "endpoint": "https://query.sse.com.cn/commonSoaQuery.do",
+      "params": {
+        "jsonCallBack": { "required": true, "value": "jsonpCallback" },
+        "issueMarketType": { "value": "1,2", "description": "市场类型" }
+      }
+    },
+    "行业统计": {
+      "sqlId": "GP_GPZCZ_GPHYTJ",
+      "method": "GET",
+      "endpoint": "https://query.sse.com.cn/commonSoaQuery.do",
+      "params": {
+        "jsonCallBack": { "required": true, "value": "jsonpCallback" },
+        "issueMarketType": { "value": "1,2", "description": "市场类型" }
+      }
+    }
+  },
+  "params_common": {
+    "jsonCallBack": { "required": true, "value": "jsonpCallback", "description": "JSONP 回调函数名" }
+  },
+  "confidence": 0.90,
+  "caveats": [
+    "JSONP 响应格式：jsonpCallback({...})，需剥离回调函数包装后解析 JSON",
+    "项目列表是主要数据接口，包含公司名、审核阶段、更新日期等",
+    "审核统计返回各状态（已受理/已问询/上会通过等）的数量汇总",
+    "行业统计返回按证监会行业分类的项目数量分布"
+  ],
+  "last_verified": "2026-03-14"
+}
