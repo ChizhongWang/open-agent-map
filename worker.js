@@ -35,9 +35,23 @@ export default {
     // Strip common web suffixes that won't match our .json files
     path = path.replace(/\/index\.(s?html?|shtml)$/, "");
 
-    // If already requesting .json, serve directly
+    // If already requesting .json, always return raw JSON (skip content negotiation)
     if (path.endsWith(".json")) {
-      return fetchAndServe(request, path);
+      const specUrl = GITHUB_PAGES_ORIGIN + path;
+      const specResp = await fetch(specUrl, {
+        headers: { "User-Agent": "Open-Agent-Map-Worker/1.0" },
+        cf: { cacheTtl: 300 },
+      });
+      if (!specResp.ok) {
+        return serve404(request, path);
+      }
+      return new Response(specResp.body, {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=300",
+        },
+      });
     }
 
     // Try fetching path + .json from GitHub Pages
