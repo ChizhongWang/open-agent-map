@@ -183,7 +183,7 @@ function renderSpecPage(spec, jsonPath) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(title)} — Open Agent Map</title>
 <style>
-  :root { --bg: #0a0a0a; --card: #141414; --border: #262626; --text: #e5e5e5; --muted: #737373; --accent: #3b82f6; }
+  :root { --bg: #ffffff; --card: #f9fafb; --border: #e5e7eb; --text: #111827; --muted: #6b7280; --accent: #2563eb; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
   .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
@@ -197,14 +197,14 @@ function renderSpecPage(spec, jsonPath) {
   .summary { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1.25rem; }
   .card h2 { font-size: 1.1rem; margin-bottom: 0.75rem; }
-  .endpoint { font-family: 'SF Mono', Consolas, monospace; font-size: 0.9rem; background: #1a1a2e; padding: 0.6rem 0.8rem; border-radius: 6px; margin-bottom: 0.75rem; overflow-x: auto; }
+  .endpoint { font-family: 'SF Mono', Consolas, monospace; font-size: 0.9rem; background: #f0f4ff; padding: 0.6rem 0.8rem; border-radius: 6px; margin-bottom: 0.75rem; overflow-x: auto; }
   .method { color: #22c55e; font-weight: 600; }
   table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
   th { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--muted); font-weight: 500; }
   td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
   td:first-child { font-family: 'SF Mono', Consolas, monospace; font-size: 0.8rem; white-space: nowrap; }
-  code { background: #1e1e2e; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.8rem; }
-  .badge { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 3px; background: #1e3a5f; color: #60a5fa; margin-left: 0.5rem; }
+  code { background: #eef2ff; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.8rem; }
+  .badge { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 3px; background: #dbeafe; color: #1d4ed8; margin-left: 0.5rem; }
   .required { color: #ef4444; font-size: 0.75rem; }
   .fixed { color: #22c55e; font-size: 0.75rem; }
   .caveat { color: #f59e0b; font-size: 0.85rem; padding: 0.3rem 0; }
@@ -326,7 +326,7 @@ function render404Page(path) {
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
   .container { max-width: 500px; padding: 2rem; text-align: center; }
   h1 { font-size: 1.5rem; margin-bottom: 0.75rem; }
-  .path { font-family: 'SF Mono', Consolas, monospace; font-size: 0.85rem; color: var(--accent); background: #1a1a2e; padding: 0.5rem 1rem; border-radius: 6px; margin-bottom: 1.5rem; word-break: break-all; }
+  .path { font-family: 'SF Mono', Consolas, monospace; font-size: 0.85rem; color: var(--accent); background: #f0f4ff; padding: 0.5rem 1rem; border-radius: 6px; margin-bottom: 1.5rem; word-break: break-all; }
   p { color: var(--muted); margin-bottom: 1.5rem; }
   form { display: flex; flex-direction: column; gap: 0.75rem; }
   input[type="email"] { padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 6px; background: var(--card); color: var(--text); font-size: 0.9rem; }
@@ -409,7 +409,7 @@ function serveHomepage(request) {
   .tagline { color: var(--muted); margin-bottom: 2rem; font-size: 1.1rem; }
   .usage { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; }
   .usage h2 { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.75rem; }
-  .usage code { display: block; font-family: 'SF Mono', Consolas, monospace; font-size: 0.85rem; padding: 0.5rem; background: #1a1a2e; border-radius: 4px; margin-bottom: 0.5rem; overflow-x: auto; }
+  .usage code { display: block; font-family: 'SF Mono', Consolas, monospace; font-size: 0.85rem; padding: 0.5rem; background: #f0f4ff; border-radius: 4px; margin-bottom: 0.5rem; overflow-x: auto; }
   .example-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; }
   .example-link:hover { text-decoration: underline; }
   .examples { list-style: none; margin-top: 1rem; }
