@@ -27,6 +27,7 @@ export default {
       return serveHomepage(request);
     }
 
+
     // Strip trailing slash
     if (path.endsWith("/")) {
       path = path.slice(0, -1);
