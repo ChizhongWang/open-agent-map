@@ -225,7 +225,7 @@ function renderSpecPage(spec, jsonPath) {
 async function copyJson(e, path) {
   e.preventDefault();
   try {
-    const resp = await fetch(path);
+    const resp = await fetch(path, { headers: { 'Accept': 'application/json' } });
     const text = await resp.text();
     await navigator.clipboard.writeText(text);
     e.target.textContent = 'Copied!';
