@@ -177,7 +177,7 @@ const BRAND_NAV = `<nav style="position:sticky;top:0;z-index:100;background:rgba
 </nav>`;
 
 const BRAND_FOOTER = `<div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;font-size:0.8rem;color:#6B7280;text-align:center;font-family:'DM Sans',sans-serif;">
-  <a href="/" style="color:#10B981;text-decoration:none;">VeriGlow Agent Map</a> — crowdsourced API specs for AI agents
+  <a href="/" style="color:#10B981;text-decoration:none;">VeriGlow Agent Map</a> — crowdsourced web data maps for AI agents
 </div>`;
 
 const BRAND_BASE_STYLE = `
@@ -546,7 +546,7 @@ function renderDirectoryPage(dirPath, children) {
       listHtml += `<li><a href="${escHtml(items[0].path)}">${escHtml(items[0].title || segment)}</a><span class="item-path">${escHtml(items[0].path)}</span></li>`;
     } else {
       // Subdirectory — link to subdirectory + show count
-      listHtml += `<li><a href="${escHtml(prefix + segment)}">${escHtml(segment)}/</a><span class="item-count">${items.length} APIs</span></li>`;
+      listHtml += `<li><a href="${escHtml(prefix + segment)}">${escHtml(segment)}/</a><span class="item-count">${items.length} pages</span></li>`;
     }
   }
 
@@ -581,7 +581,7 @@ ${BRAND_NAV}
   </div>
 
   <h1>${escHtml(displayPath)}</h1>
-  <p class="stats">${children.length} mapped API${children.length > 1 ? "s" : ""}</p>
+  <p class="stats">${children.length} pages mapped</p>
 
   <ul>${listHtml}</ul>
 
