@@ -340,6 +340,11 @@
     "summary": "自文档化站点。CSV 端点无需认证：fredgraph.csv?id={SERIES_ID}&cosd={START}&coed={END}。常用 series: GDP, CPIAUCSL, DGS10, FEDFUNDS, UNRATE。"
   },
   {
+    "path": "/www.producthunt.com",
+    "title": "Product Hunt",
+    "summary": "自文档化站点。GraphQL API 完备，支持 posts/comments/topics/users/collections 查询，需 OAuth2 token。"
+  },
+  {
     "path": "/www.sse.com.cn/market/sseindex/indexlist/basic",
     "title": "指数列表",
     "summary": "上交所指数列表数据，通过 commonQuery.do 接口获取。"

@@ -1,0 +1,22 @@
+{
+  "id": "www.producthunt.com",
+  "name": "Product Hunt",
+  "type": "signpost",
+  "verdict": "self-documented",
+  "why_no_deep_map": "官方 GraphQL API 完备，文档齐全，支持 posts/comments/topics/users/collections 全量查询",
+  "quick_start": "curl -s https://api.producthunt.com/v2/api/graphql -H 'Authorization: Bearer {TOKEN}' -H 'Content-Type: application/json' -d '{\"query\":\"{posts(first:5){edges{node{name,tagline,votesCount,website}}}}\"}' | jq",
+  "graphql_endpoint": {
+    "url": "https://api.producthunt.com/v2/api/graphql",
+    "auth": "OAuth2 Bearer token (申请: https://api.producthunt.com/v2/docs)",
+    "docs": "https://api.producthunt.com/v2/docs",
+    "schema": "https://github.com/producthunt/producthunt-api/blob/master/schema.graphql"
+  },
+  "key_queries": {
+    "posts": "产品列表（支持按日期、话题筛选，含投票数、评论数）",
+    "post(slug)": "单个产品详情 + 评论（comments: body, user, replies, votesCount）",
+    "topics": "话题/分类列表",
+    "collections": "产品合集",
+    "user": "用户信息 + 发布/投票历史"
+  },
+  "last_verified": "2026-03-15"
+}
