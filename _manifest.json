@@ -310,14 +310,34 @@
     "summary": "上交所大宗交易-科创板数据，通过 commonQuery.do 接口获取。"
   },
   {
-    "path": "/www.sse.com.cn/market/price/report",
-    "title": "市场报告",
-    "summary": "上交所市场报告。"
+    "path": "/yunhq.sse.com.cn/dayk",
+    "title": "个股日K线历史数据",
+    "summary": "获取任意上交所股票从IPO至今的完整日K线（OHLCV）历史数据。无需认证。"
   },
   {
-    "path": "/www.sse.com.cn/market/price/trends",
-    "title": "行情走势",
-    "summary": "上交所行情走势。"
+    "path": "/yunhq.sse.com.cn/mink",
+    "title": "个股5分钟K线",
+    "summary": "获取上交所股票5分钟K线数据，约250个交易日历史。"
+  },
+  {
+    "path": "/yunhq.sse.com.cn/line",
+    "title": "个股当日分时走势",
+    "summary": "获取单只股票当日的分时走势数据（1分钟粒度）。"
+  },
+  {
+    "path": "/yunhq.sse.com.cn/snap",
+    "title": "个股实时快照",
+    "summary": "获取单只股票的实时行情快照，包括最新价、涨跌、五档盘口等。"
+  },
+  {
+    "path": "/yunhq.sse.com.cn/list-equity",
+    "title": "全市场股票实时行情列表",
+    "summary": "获取上交所全部股票的实时行情快照（代码、名称、开高低收、涨跌幅、成交量额）。"
+  },
+  {
+    "path": "/fred.stlouisfed.org",
+    "title": "FRED (Federal Reserve Economic Data)",
+    "summary": "自文档化站点。CSV 端点无需认证：fredgraph.csv?id={SERIES_ID}&cosd={START}&coed={END}。常用 series: GDP, CPIAUCSL, DGS10, FEDFUNDS, UNRATE。"
   },
   {
     "path": "/www.sse.com.cn/market/sseindex/indexlist/basic",

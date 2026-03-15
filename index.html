@@ -227,20 +227,57 @@ footer a:hover{color:var(--am-green);}
       <div class="site-card-title">
         <img class="site-favicon" src="https://www.google.com/s2/favicons?domain=www.sse.com.cn&sz=32" alt="" width="20" height="20">
         Shanghai Stock Exchange (上海证券交易所)
-        <small>www.sse.com.cn</small>
+        <small>www.sse.com.cn — 页面隐藏 API</small>
       </div>
       <div class="site-card-badge">Deep Map</div>
     </div>
-    <div class="site-card-meta"><span id="sse-count">--</span> pages mapped &middot; 隐藏API + 静态HTML解析</div>
+    <div class="site-card-meta"><span id="sse-count">76</span> maps &middot; commonQuery.do 隐藏 API 逆向</div>
     <div class="site-tree">
-      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">market/</span> <span class="branch-count">61 pages</span> <span class="branch-desc">— 股票、债券、基金、指数行情数据</span></div>
-      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">disclosure/</span> <span class="branch-count">11 pages</span> <span class="branch-desc">— 公告、定期报告、信息披露</span></div>
-      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">assortment/</span> <span class="branch-count">&nbsp;6 pages</span> <span class="branch-desc">— 股票分类、上市公司列表</span></div>
-      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">regulation/</span> <span class="branch-count">&nbsp;5 pages</span> <span class="branch-desc">— 监管动态、处分措施</span></div>
-      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">listing/</span> <span class="branch-count">&nbsp;3 pages</span> <span class="branch-desc">— IPO审核、业务通知</span></div>
-      <div class="branch"><span class="branch-prefix">└──</span> <span class="branch-dir">lawandrules/</span> <span class="branch-count">&nbsp;1 page&nbsp;</span> <span class="branch-desc">— 业务指南</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">market/</span> <span class="branch-count">58 maps</span> <span class="branch-desc">— 股票、债券、基金、指数行情数据</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">disclosure/</span> <span class="branch-count">11 maps</span> <span class="branch-desc">— 公告、定期报告、信息披露</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">assortment/</span> <span class="branch-count">&nbsp;6 maps</span> <span class="branch-desc">— 股票分类、上市公司列表</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">regulation/</span> <span class="branch-count">&nbsp;5 maps</span> <span class="branch-desc">— 监管动态、处分措施</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">listing/</span> <span class="branch-count">&nbsp;3 maps</span> <span class="branch-desc">— IPO审核、业务通知</span></div>
+      <div class="branch"><span class="branch-prefix">└──</span> <span class="branch-dir">lawandrules/</span> <span class="branch-count">&nbsp;1 map&nbsp;</span> <span class="branch-desc">— 业务指南</span></div>
     </div>
-    <a href="/www.sse.com.cn" class="site-card-action">Browse all pages &rarr;</a>
+    <a href="/www.sse.com.cn" class="site-card-action">Browse all maps &rarr;</a>
+  </div>
+
+  <div class="site-card">
+    <div class="site-card-head">
+      <div class="site-card-title">
+        <img class="site-favicon" src="https://www.google.com/s2/favicons?domain=www.sse.com.cn&sz=32" alt="" width="20" height="20">
+        SSE Cloud Quotes (上交所云行情)
+        <small>yunhq.sse.com.cn — 独立 API 微服务</small>
+      </div>
+      <div class="site-card-badge">API Service</div>
+    </div>
+    <div class="site-card-meta">5 maps &middot; RESTful 行情接口，无需认证</div>
+    <div class="site-tree">
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">dayk</span> <span class="branch-count">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="branch-desc">— 个股日K线（IPO至今完整历史）</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">mink</span> <span class="branch-count">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="branch-desc">— 个股5分钟K线（~250交易日）</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">line</span> <span class="branch-count">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="branch-desc">— 当日分时走势（1分钟粒度）</span></div>
+      <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">snap</span> <span class="branch-count">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="branch-desc">— 实时快照（最新价、五档盘口）</span></div>
+      <div class="branch"><span class="branch-prefix">└──</span> <span class="branch-dir">list-equity</span> <span class="branch-count">&nbsp;</span> <span class="branch-desc">— 全市场股票实时行情列表</span></div>
+    </div>
+    <a href="/yunhq.sse.com.cn" class="site-card-action">Browse all maps &rarr;</a>
+  </div>
+
+  <div class="site-card">
+    <div class="site-card-head">
+      <div class="site-card-title">
+        <img class="site-favicon" src="https://www.google.com/s2/favicons?domain=fred.stlouisfed.org&sz=32" alt="" width="20" height="20">
+        FRED (Federal Reserve Economic Data)
+        <small>fred.stlouisfed.org — 自文档化</small>
+      </div>
+      <div class="site-card-badge" style="background:var(--am-blue-dim);color:var(--am-blue);">Signpost</div>
+    </div>
+    <div class="site-card-meta">路由指引 &middot; 官方 API 完备，无需逆向</div>
+    <div class="site-tree">
+      <div class="branch"><span class="branch-prefix">CSV</span> <span class="branch-dir">fredgraph.csv?id={SERIES}&cosd={START}&coed={END}</span></div>
+      <div class="branch"><span class="branch-prefix">&nbsp;&nbsp;&nbsp;</span> <span class="branch-desc">GDP · CPIAUCSL · DGS10 · FEDFUNDS · UNRATE · VIXCLS · M2SL · T10Y2Y</span></div>
+    </div>
+    <a href="/fred.stlouisfed.org" class="site-card-action">View signpost &rarr;</a>
   </div>
 
   <div class="site-card">
@@ -248,11 +285,11 @@ footer a:hover{color:var(--am-green);}
       <div class="site-card-title">
         <img class="site-favicon" src="https://www.google.com/s2/favicons?domain=cuhk.edu.cn&sz=32" alt="" width="20" height="20">
         CUHK Shenzhen (香港中文大学（深圳）)
-        <small>cuhk.edu.cn</small>
+        <small>cuhk.edu.cn — 页面隐藏 API</small>
       </div>
       <div class="site-card-badge">Deep Map</div>
     </div>
-    <div class="site-card-meta"><span id="cuhk-count">--</span> pages mapped &middot; Drupal 静态HTML解析</div>
+    <div class="site-card-meta"><span id="cuhk-count">6</span> maps &middot; Drupal 静态HTML解析</div>
     <div class="site-tree">
       <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">article-search</span> <span class="branch-count">~130页</span> <span class="branch-desc">— 新闻搜索（关键词/分类/日期筛选）</span></div>
       <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">research-news</span> <span class="branch-count">~48页</span> <span class="branch-desc">— 科研成果新闻</span></div>
@@ -261,7 +298,7 @@ footer a:hover{color:var(--am-green);}
       <div class="branch"><span class="branch-prefix">├──</span> <span class="branch-dir">event-search</span> <span class="branch-count">多页&nbsp;</span> <span class="branch-desc">— 活动预告与搜索</span></div>
       <div class="branch"><span class="branch-prefix">└──</span> <span class="branch-dir">taxonomy/term/37</span> <span class="branch-count">&nbsp;1页&nbsp;</span> <span class="branch-desc">— 工作机会（40+职位）</span></div>
     </div>
-    <a href="/cuhk.edu.cn" class="site-card-action">Browse all pages &rarr;</a>
+    <a href="/cuhk.edu.cn" class="site-card-action">Browse all maps &rarr;</a>
   </div>
   </div>
 </section>
@@ -319,6 +356,10 @@ function updateSiteStats(data) {
     const el = document.getElementById(id + '-count');
     if (el && count) el.textContent = count;
   }
+  // Update total in hero subtitle
+  const total = data.length;
+  const totalEl = document.getElementById('total-maps');
+  if (totalEl && total) totalEl.textContent = total;
 }
 
 function isUrlLike(v) {
