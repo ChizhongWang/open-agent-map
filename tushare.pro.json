@@ -1,0 +1,31 @@
+{
+  "id": "tushare.pro",
+  "name": "Tushare Pro (挖地兔)",
+  "type": "signpost",
+  "verdict": "self-documented",
+  "why_no_deep_map": "Python SDK + REST API 文档完备，注册即可获取 token 使用",
+  "quick_start": "pip install tushare && python -c \"import tushare as ts; ts.set_token('YOUR_TOKEN'); pro=ts.pro_api(); print(pro.daily(ts_code='000001.SZ', start_date='20260101', end_date='20260318'))\"",
+  "api": {
+    "type": "Python SDK + HTTP API",
+    "docs": "https://tushare.pro/document/2",
+    "auth": "免费注册获取 token，积分制（高级接口需要更多积分）",
+    "install": "pip install tushare"
+  },
+  "key_interfaces": {
+    "pro.daily()": "A股日线行情（OHLCV），历史可追溯10年+",
+    "pro.adj_factor()": "复权因子",
+    "pro.stock_basic()": "股票列表（含上市日期、行业、地域）",
+    "pro.limit_list()": "每日涨跌停统计（打板策略核心）",
+    "pro.top_list()": "龙虎榜每日明细",
+    "pro.top_inst()": "龙虎榜机构交易明细",
+    "pro.margin_detail()": "融资融券每日交易明细",
+    "pro.concept()": "概念板块列表",
+    "pro.concept_detail()": "概念板块成分股",
+    "pro.index_daily()": "指数日线行情",
+    "pro.news()": "新闻快讯",
+    "pro.major_news()": "重大新闻"
+  },
+  "strengths": "历史数据深度最好（10年+），涨跌停/龙虎榜/概念板块等衍生数据齐全",
+  "limitations": "高级接口需积分（通过贡献或付费获取），免费账户有调用频率限制",
+  "last_verified": "2026-03-18"
+}

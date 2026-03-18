@@ -1,0 +1,32 @@
+{
+  "id": "akshare",
+  "name": "AKShare (开源财经数据)",
+  "type": "signpost",
+  "verdict": "self-documented",
+  "why_no_deep_map": "完全开源的 Python 库，GitHub 文档详尽，无需 token 即可使用大部分接口",
+  "quick_start": "pip install akshare && python -c \"import akshare as ak; df=ak.stock_zh_a_hist(symbol='000001', period='daily', start_date='20260101', end_date='20260318'); print(df)\"",
+  "api": {
+    "type": "Python SDK（底层爬取东方财富/新浪/同花顺等数据源）",
+    "docs": "https://akshare.akfamily.xyz/",
+    "github": "https://github.com/akfamily/akshare",
+    "auth": "大部分接口无需 token",
+    "install": "pip install akshare",
+    "http_api": "aktools 提供 HTTP API 封装：https://github.com/akfamily/aktools"
+  },
+  "key_interfaces": {
+    "stock_zh_a_hist()": "A股历史行情（日/周/月K线），数据源东方财富",
+    "stock_zh_a_spot_em()": "A股实时行情快照",
+    "stock_em_zt_pool()": "涨停板池（实时+历史）",
+    "stock_em_zt_pool_dtgc()": "跌停板池",
+    "stock_em_zt_pool_zbgc()": "炸板池（盘中打开涨停）",
+    "stock_board_concept_name_em()": "概念板块列表（东方财富）",
+    "stock_board_concept_cons_em()": "概念板块成分股",
+    "stock_board_industry_name_em()": "行业板块列表",
+    "stock_lhb_detail_em()": "龙虎榜明细",
+    "stock_margin_detail_szse()": "深交所融资融券明细",
+    "stock_news_em()": "个股新闻"
+  },
+  "strengths": "完全免费开源，无需注册，涨停板池/炸板池等打板策略专用接口，底层数据源多样",
+  "limitations": "依赖第三方网站爬取，接口可能因源站改版而失效；无 SLA 保证",
+  "last_verified": "2026-03-18"
+}

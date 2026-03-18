@@ -345,6 +345,16 @@
     "summary": "自文档化站点。GraphQL API 完备，支持 posts/comments/topics/users/collections 查询，需 OAuth2 token。"
   },
   {
+    "path": "/tushare.pro",
+    "title": "Tushare Pro (挖地兔)",
+    "summary": "Python SDK + REST API。A股日线(10年+)、涨跌停统计、龙虎榜、概念板块、融资融券。注册获取 token。"
+  },
+  {
+    "path": "/akshare",
+    "title": "AKShare (开源财经数据)",
+    "summary": "开源 Python 库，无需 token。涨停板池、炸板池、概念板块、龙虎榜。底层爬取东方财富/新浪等。"
+  },
+  {
     "path": "/www.szse.cn/market/stock-snapshot",
     "title": "深交所股票日行情",
     "summary": "深交所全市场股票行情快照：OHLC、涨跌幅、成交量额、市盈率。CATALOGID=1815_stock_snapshot, TABKEY=tab1。"
