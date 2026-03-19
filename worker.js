@@ -346,6 +346,20 @@ ${BRAND_NAV}
       : ""
   }
 
+  ${
+    spec.action_steps_template
+      ? `
+  <div class="card">
+    <h2>Action Steps Template</h2>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem;">${escHtml(spec.action_steps_template.description || "Browser replay steps for evidence creation.")}</p>
+    <pre style="background:#f0fdf4;padding:0.75rem 1rem;border-radius:6px;font-size:0.8rem;overflow-x:auto;font-family:'JetBrains Mono',monospace;">${escHtml(JSON.stringify(spec.action_steps_template.steps, null, 2))}</pre>
+    ${spec.action_steps_template.example ? `
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;margin-bottom:0.5rem;">Example (date = 2025-03-10):</p>
+    <pre style="background:#f0fdf4;padding:0.75rem 1rem;border-radius:6px;font-size:0.8rem;overflow-x:auto;font-family:'JetBrains Mono',monospace;">${escHtml(JSON.stringify(spec.action_steps_template.example, null, 2))}</pre>` : ""}
+  </div>`
+      : ""
+  }
+
   <div class="report-link">
     Data outdated? <a href="https://github.com/ChizhongWang/open-agent-map/issues/new?title=STALE:+${encodeURIComponent(jsonPath)}" target="_blank">Report an issue</a>
   </div>
